@@ -24,7 +24,7 @@ Task: Find customers with at least one funded savings plan and one funded invest
 
 * Validated the result using two sample records.
 
-**Result:** ![Task 1 result](/Images/Assessment_Q1_Result.png)
+**Result:** ![Task 1 result](/images/Assessment_Q1_Result.png)
 
 
 2. **Transaction Frequency Analysis**
@@ -56,7 +56,7 @@ Low Frequency: ≤ 2 transactions/month
 
 *Rewrote nested queries into CTEs for better performance and clarity.*
 
-**Result:** ![Task 2 result](Images/Assessment_Q2_Result.png)
+**Result:** ![Task 2 result](images/Assessment_Q2_Result.png)
 
 3. **Account Inactivity Alert**
 Scenario: Identify savings or investment accounts with no inflow transactions in the past 365 days.
@@ -73,7 +73,7 @@ Task: Find active accounts that have had no transaction activity for over one ye
 
 * Applied filters using HAVING on the result of a CTE to isolate inactive accounts.
 
-**Result:** ![Task 3 result](Images/Assessment_Q3_Result.png)
+**Result:** ![Task 3 result](images/Assessment_Q3_Result.png)
 
 4. **Customer Lifetime Value (CLV) Estimation**
 Scenario: Estimate Customer Lifetime Value based on account tenure and transaction volume. Assume a profit rate of 0.1% per transaction.
@@ -104,6 +104,6 @@ Estimated CLV
 
 *Resolution: Wrapped the created_on column in MIN() to comply with MySQL's strict mode and resolve the error.*
 
-**Result:** ![Task 4 result](Images/Assessment_Q4_Result.png)
+**Result:** ![Task 4 result](images/Assessment_Q4_Result.png)
 
 # **Thanks for following!**

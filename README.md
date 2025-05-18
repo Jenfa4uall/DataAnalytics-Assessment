@@ -23,6 +23,8 @@ Task: Find customers with at least one funded savings plan and one funded invest
 * Grouped and ordered the result set by relevant fields.
 
 * Validated the result using two sample records.
+**Result:** ![Task 1 result](images/Assessment_Q1_Result.png)
+
 
 2. **Transaction Frequency Analysis**
 Scenario: Segment customers by transaction frequency (e.g., frequent vs. occasional users).
@@ -53,6 +55,8 @@ Low Frequency: ≤ 2 transactions/month
 
 *Rewrote nested queries into CTEs for better performance and clarity.*
 
+**Result:** ![Task 2 result](images/Assessment_Q2_Result.png)
+
 3. **Account Inactivity Alert**
 Scenario: Identify savings or investment accounts with no inflow transactions in the past 365 days.
 
@@ -67,6 +71,8 @@ Task: Find active accounts that have had no transaction activity for over one ye
 * Used DATEDIFF() to calculate days since the last transaction.
 
 * Applied filters using HAVING on the result of a CTE to isolate inactive accounts.
+
+**Result:** ![Task 3 result](images/Assessment_Q3_Result.png)
 
 4. **Customer Lifetime Value (CLV) Estimation**
 Scenario: Estimate Customer Lifetime Value based on account tenure and transaction volume. Assume a profit rate of 0.1% per transaction.
@@ -96,5 +102,7 @@ Estimated CLV
 *Cause: This is due to ONLY_FULL_GROUP_BY mode, which enforces that all selected columns must be in GROUP BY or aggregated.*
 
 *Resolution: Wrapped the created_on column in MIN() to comply with MySQL's strict mode and resolve the error.*
+
+**Result:** ![Task 4 result](images/Assessment_Q4_Result.png)
 
 # **Thanks for following!**

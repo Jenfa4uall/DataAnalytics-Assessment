@@ -20,13 +20,14 @@ WITH inactive_table AS (
     FROM savings_savingsaccount s
     JOIN plans_plan p ON p.id = s.plan_id
     GROUP BY s.plan_id, s.owner_id, p.is_regular_savings, p.is_a_fund
-    HAVING DATEDIFF(CURRENT_TIMESTAMP(), MAX(s.transaction_date)) > 365
-)
+    HAVING inactivity_days > 365
+    )
 
 SELECT *
 FROM inactive_table
 WHERE type IN ('savings', 'investments')
 ORDER BY inactivity_days DESC;
+
 
 -- BIG QUERY VERSION
 -- Please use this if this is being executed on Google Big Query
@@ -48,7 +49,7 @@ filtered_inactive AS (
     SELECT *,
         DATE_DIFF(CURRENT_DATE(), last_transaction_date, DAY) AS inactivity_days
     FROM inactive_table
-    WHERE DATE_DIFF(CURRENT_DATE(), last_transaction_date, DAY) > 365
+    WHERE inactivity_days > 365
 )
 
 SELECT *

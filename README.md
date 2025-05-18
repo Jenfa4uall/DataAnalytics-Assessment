@@ -24,7 +24,7 @@ Task: Find customers with at least one funded savings plan and one funded invest
 
 * Validated the result using two sample records.
 
-**Result:** ![Task 1 result](DataAnalytics-Assessment/images/Assessment_Q1_Result.png)
+**Result:** ![Task 1 result](/images/Assessment_Q1_Result.png)
 
 
 2. **Transaction Frequency Analysis**

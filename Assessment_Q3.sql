@@ -8,6 +8,7 @@ WITH inactive_table AS (
     SELECT
         s.plan_id,
         s.owner_id,
+        -- Categorizing to determine if it is a saving or investment plan 
         CASE 
             WHEN p.is_regular_savings = '1' THEN 'savings'
             WHEN p.is_a_fund = '1' THEN 'investments'

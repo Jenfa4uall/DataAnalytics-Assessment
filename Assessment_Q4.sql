@@ -12,6 +12,7 @@ SELECT
     COUNT(*) AS total_transactions,
     
     -- Use the correct formula below based on SQL engine:
+    -- The timestampdiff() allows us to calculate the number of months between the creation date and current time stamp. 
     ROUND((
         COUNT(*) / TIMESTAMPDIFF(MONTH, MIN(s.created_on), CURRENT_TIMESTAMP())
     ) * 12 * (0.1 / 100), 2) AS estimated_clv -- MySQL

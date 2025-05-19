@@ -46,6 +46,8 @@ Low Frequency: ≤ 2 transactions/month
 
 * Used DATE_FORMAT to get unique identifier for calendar month to group transactions by month and AVG() for monthly frequency. Using month number will cause an analysis integrity issue because month number 1 might be January 2024, another row for month number 1 might be January 2023.
 
+* The google big query version of the code is comment out, please use if this is being validated on bigquery.
+
 * Final categorization used CASE logic, and results were grouped accordingly.
 
 ## **Challenges & Resolution:**

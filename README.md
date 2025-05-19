@@ -8,6 +8,8 @@ The assessment includes a database dump and four scenario-based tasks, each focu
 2. Data tables were explored to understand relationships and data points.
 3. Assessment requirements were carefully reviewed before implementation.
 
+## **Note:** On some queries that require some transformation using functions native to MYSQL, a BigQuery version of that was made available as a comment in the block of code for your use if this assessment is being validated on BigQuery.
+
 ## **Assessment Tasks**
 1. **High-Value Customers with Multiple Products**
 Scenario: Identify customers who have both a funded savings and funded investment plan. This helps in discovering cross-selling opportunities.

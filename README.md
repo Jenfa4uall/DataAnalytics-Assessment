@@ -8,7 +8,7 @@ The assessment includes a database dump and four scenario-based tasks, each focu
 2. Data tables were explored to understand relationships and data points.
 3. Assessment requirements were carefully reviewed before implementation.
 
-## **Note:** On some queries that require some transformation using functions native to MYSQL, a BigQuery version of that was made available as a comment in the block of code for your use if this assessment is being validated on BigQuery.
+### **Note:** On some queries that require some transformation using functions native to MYSQL, a BigQuery version of that was made available as a comment in the block of code for your use if this assessment is being validated on BigQuery.
 
 ## **Assessment Tasks**
 1. **High-Value Customers with Multiple Products**
@@ -76,6 +76,7 @@ Task: Find active accounts that have had no transaction activity for over one ye
 * Used DATEDIFF() to calculate days since the last transaction.
 
 * Applied filters using HAVING on the result of a CTE to isolate inactive accounts.
+* 1638 custo
 
 **Result:** ![Task 3 result](images/Assessment_Q3_Result.png)
 

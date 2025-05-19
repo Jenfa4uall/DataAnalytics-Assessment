@@ -15,11 +15,11 @@ WITH inactive_table AS (
             ELSE 'undefined'
         END AS type,
 
-        -- Use the appropriate line below based on SQL engine:
+        -- Use the appropriate line below based on SQL engine: This truncates the time from the transaction_date field.  
         MAX(DATE_FORMAT(s.transaction_date, '%Y-%m-%d')) AS last_transaction_date, -- MySQL
         -- FORMAT_DATE('%Y-%m-%d', DATE(MAX(s.transaction_date))) AS last_transaction_date, -- BigQuery
 
-        -- Use the appropriate line below for inactivity_days:
+        -- Use the appropriate line below for inactivity_days: This calculate the difference in the current time stamp and last transaction date in days.
         DATEDIFF(CURRENT_TIMESTAMP(), MAX(s.transaction_date)) AS inactivity_days -- MySQL
         -- DATE_DIFF(CURRENT_DATE(), DATE(MAX(s.transaction_date)), DAY) AS inactivity_days, -- BigQuery
         
@@ -31,7 +31,9 @@ WITH inactive_table AS (
     HAVING inactivity_days > 365
     -- HAVING DATE_DIFF(CURRENT_DATE(), DATE(MAX(s.transaction_date)), DAY) > 365
 )
+-- Getting the final result by filtering using the category. 
 SELECT *
 FROM inactive_table
 WHERE type IN ('savings', 'investments')
 ORDER BY inactivity_days DESC;
+
